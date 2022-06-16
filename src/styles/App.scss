@@ -1,0 +1,18 @@
+@use 'shared';
+#root {
+  height: 100vh;
+}
+.app {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header,
+.footer {
+  flex: none;
+}
+.main {
+  flex: auto;
+}
