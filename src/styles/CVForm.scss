@@ -1,0 +1,12 @@
+@use 'shared';
+.CVForm {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  .personal,
+  .experience,
+  .education {
+    display: flex;
+    flex-direction: column;
+  }
+}
