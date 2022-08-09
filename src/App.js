@@ -18,8 +18,13 @@ class App extends Component {
   }
   this.handleTextChange = this.handleTextChange.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
+  this.deleteHandler = this.deleteHandler.bind(this);
   }
-
+  deleteHandler(containerName, id) {
+    this.setState({
+      [containerName]: this.state[containerName].filter((element)=> element.id !== id )
+    })
+  }
   handleTextChange(e) {
     const prop = {...this.state[e.target.parentNode.className]};
     prop[e.target.name] = e.target.value;
@@ -46,7 +51,8 @@ class App extends Component {
       handleSubmit={this.handleSubmit}
       personal={personal}
       experiences={experiences}
-      educations={educations}/>
+      educations={educations}
+      deleteHandler={this.deleteHandler}/>
       <Footer />
     </div>);
     return app;
