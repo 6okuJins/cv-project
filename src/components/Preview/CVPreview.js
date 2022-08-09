@@ -24,11 +24,11 @@ const CVPreview = React.forwardRef((props, refs) => {
         return (<p>{personal[key]}</p>);
       })} */}
       <div className={PreviewStyle.education}>
-        Education
+        <h1>EDUCATION</h1>
       {educations.map((education) => {
         return (
           <div key={education.id}>
-            <div>{education.from}-{education.to}</div>
+            <div>{education.from} - {education.to}</div>
             <div>{education.institution}</div>
             <div>{education.degree}</div>
             <button className={PreviewStyle.deleteButton} onClick={() => deleteHandler('educations', education.id)}><DeleteIcon /></button>
@@ -37,11 +37,11 @@ const CVPreview = React.forwardRef((props, refs) => {
       })}
       </div>
         <div className={PreviewStyle.experience}>
-          Experience
+          <h1>EXPERIENCE</h1>
       {experiences.map((experience) => {
         return (
           <div key={experience.id}>
-            <div>{experience.from}-{experience.to}</div>
+            <div>{experience.from} - {experience.to}</div>
             <div>{experience.position}</div>
             <div>{experience.company}, {experience.city}</div>
             <button className={PreviewStyle.deleteButton} onClick={() => deleteHandler('experiences', experience.id)}><DeleteIcon /></button>
