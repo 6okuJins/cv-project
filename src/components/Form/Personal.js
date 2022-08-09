@@ -12,7 +12,7 @@ const Personal = (props) => {
       <input type="text" name="phone-number" placeholder="Phone number" onChange={onChange} />
       <input type="text" name="e-mail" placeholder="Email" onChange={onChange} />
       <input type="text" name="github" placeholder="Github" onChange={onChange} />
-      <input type="text" name="description" placeholder="Description" onChange={onChange} />
+      <textarea name="description" placeholder="Description" onChange={onChange} />
     </div>
   );
   return result;

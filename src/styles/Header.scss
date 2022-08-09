@@ -1,9 +1,17 @@
 @use 'shared';
+@font-face {
+  font-family: 'Oleo';
+  src: url('../assets/OleoScriptSwashCaps-Regular.ttf');
+}
 .header {
   display: flex;
   justify-content: center;
   background-color: shared.$primary-color;
   h1 {
-    font-size: 100px;
+    font-family: 'Oleo';
+    font-size: 80px;
+    color: white;
+    padding: 20px;
+
   }
 }
