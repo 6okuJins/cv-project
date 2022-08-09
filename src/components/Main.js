@@ -4,7 +4,7 @@ import CVForm from './Form/CVForm';
 import CVPreview from './Preview/CVPreview';
 
 const Main = (props) => {
-  const { onChange, handleSubmit, deleteHandler} = props;
+  const { onChange, handleSubmit} = props;
   const previewRef = React.createRef();
   const handlePrint = useReactToPrint({ content: () => previewRef.current});
   const main = (<div className='main'>
